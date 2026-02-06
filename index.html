@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Para mi Esposa ❤️</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi San Valentín - Yari</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Para mi Esposa ❤️</h1>
 
-    <div id="zona-juego">
-        <div id="galeria">
-            <div class="foto-texto">
-                <img src="WhatsApp Image 2026-01-04 at 1.26.21 AM.jpeg" alt="Foto 1">
-                <p>Texto de amor 1</p>
-            </div>
-            <div class="foto-texto">
-                <img src=WhatsApp Image 2026-01-04 at 1.26.21 AM.jpeg
-                <p>Texto de amor 2</p>
-            </div>
-            <div class="foto-texto">
-                <img src="images/foto3.jpg" alt="Foto 3">
-                <p>Texto de amor 3</p>
-            </div>
-            <div class="foto-texto">
-                <img src="images/foto4.jpg" alt="Foto 4">
-                <p>Texto de amor 4</p>
-            </div>
-            <div class="foto-texto">
-                <img src="images/foto5.jpg" alt="Foto 5">
-                <p>Texto de amor 5</p>
-            </div>
-            <div class="foto-texto">
-                <img src="images/foto6.jpg" alt="Foto 6">
-                <p>Texto de amor 6</p>
-            </div>
-        </div>
+<!-- Pantalla de contraseña -->
+<div id="password-screen">
+    <h2>Ingresa la contraseña 💖</h2>
+    <input type="password" id="password-input" placeholder="Tu contraseña">
+    <button id="password-btn">Entrar</button>
+    <p id="password-error" style="color:red; display:none;">Contraseña incorrecta 😢</p>
+</div>
 
-        <button id="siBtn">SÍ ❤️</button>
-        <button id="noBtn">NO 😅</button>
+<!-- Pantalla de recuerdos -->
+<div id="memory-screen" style="display:none;">
+    <h2>Yari 💕</h2>
+
+    <!-- Texto 1 -->
+    <div class="memory-text">
+        <p>Yari, yo te conocí en primero de secundaria. La primera vez que te vi me quedé sin palabras… nunca imaginé que en esa niña calladita iba a encontrar a una mujer tan increíble. Hermosa por fuera, pero aún más hermosa por dentro. Me siento muy feliz de haber vivido mi secundaria contigo, de haber compartido momentos de amor, risas, tristezas y hasta peleas, porque todo eso también formó lo nuestro.</p>
+        <img src="images/foto1.jpg" alt="Foto 1">
     </div>
 
-    <div id="musica">
-        <audio id="cancion" src="music/amor.mp3" preload="auto"></audio>
-        <audio id="miAudio" src="audio/mi-mensaje.mp3" preload="auto"></audio>
-        <button id="playBtn">Reproducir 🎵</button>
+    <!-- Texto 2 -->
+    <div class="memory-text">
+        <p>Sé que hemos terminado y vuelto más de una vez, y sé que muchas veces fue por nuestra inmadurez. Pero no quiero que todo quede solo en recuerdos. Yo quiero seguir creando recuerdos contigo. Algunos de los momentos más felices de mi vida han sido contigo: darte un abrazo, besarte, recostarme a tu lado. Esos instantes sencillos son los que más valoro y los que siempre voy a llevar en mi corazón.</p>
+        <img src="images/foto2.jpg" alt="Foto 2">
     </div>
 
-    <canvas id="efectos"></canvas>
+    <!-- Texto 3 -->
+    <div class="memory-text">
+        <p>Sé que como pareja tendremos discusiones, pero también sé que nuestro amor puede con eso y con mucho más. Yo quiero una familia contigo, quiero vivir a tu lado y acompañarte en todo lo que amas y te apasiona. Siempre voy a apoyarte, porque no solo quiero ser tu pareja, quiero ser tu compañero de vida. Perdón si sigo escribiéndote textos así, pero no puedo dejar de decirte lo hermosa que eres. Para mí siempre serás mi niña, con tu forma espontánea de ser, tu bipolaridad, tu diversión, esa Yari que me hace reír y olvidar mis problemas. Te amo. 💖</p>
+        <img src="images/foto3.jpg" alt="Foto 3">
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Botones -->
+    <div class="buttons">
+        <button id="no-btn">No</button>
+        <button id="yes-btn">Sí</button>
+    </div>
+
+    <!-- Mensaje al presionar NO -->
+    <p id="no-msg" style="color:red; display:none;">¿Segura que no? 😢</p>
+</div>
+
+<!-- Mensaje final -->
+<div id="final-message" style="display:none;">
+    <h2>¡Gracias por decir que sí! 😍</h2>
+    <p>Eres lo mejor que me ha pasado 💖</p>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
