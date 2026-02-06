@@ -43,16 +43,27 @@ h1 {
     color: #333;
 }
 
-#noBtn {
+#siBtn, #noBtn {
     position: absolute;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#siBtn {
+    bottom: 20px;
+    left: 20px;
+    background: #66cc66;
+    color: white;
+}
+
+#noBtn {
     bottom: 20px;
     right: 20px;
-    padding: 10px 20px;
     background: #ff6699;
     color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
 #musica {
