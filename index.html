@@ -2,34 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Quieres ser mi San Valentín?</title>
+    <title>Para mi Esposa ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <h1 class="title">¡Hola amor! 💕</h1>
-            <p class="subtitle">¿Quieres ser mi San Valentín?</p>
-            
-            <div class="buttons-container">
-                <button id="yesBtn" class="btn btn-yes">
-                    <span>Sí, claro que sí ❤️</span>
-                </button>
-                <button id="noBtn" class="btn btn-no">
-                    <span>No</span>
-                </button>
+    <h1>Para mi Esposa ❤️</h1>
+
+    <div id="zona-juego">
+        <div id="galeria">
+            <div class="foto-texto">
+                <img src="images/foto1.jpg" alt="Foto 1">
+                <p>Texto de amor 1</p>
             </div>
-            
-            <div id="success" class="success-message" style="display: none;">
-                <h2>¡Yay! 🎉</h2>
-                <p>¡Eres la persona más increíble del mundo!</p>
-                <p>Te amo muchísimo 💕</p>
+            <div class="foto-texto">
+                <img src="images/foto2.jpg" alt="Foto 2">
+                <p>Texto de amor 2</p>
+            </div>
+            <div class="foto-texto">
+                <img src="images/foto3.jpg" alt="Foto 3">
+                <p>Texto de amor 3</p>
+            </div>
+            <div class="foto-texto">
+                <img src="images/foto4.jpg" alt="Foto 4">
+                <p>Texto de amor 4</p>
+            </div>
+            <div class="foto-texto">
+                <img src="images/foto5.jpg" alt="Foto 5">
+                <p>Texto de amor 5</p>
+            </div>
+            <div class="foto-texto">
+                <img src="images/foto6.jpg" alt="Foto 6">
+                <p>Texto de amor 6</p>
             </div>
         </div>
+
+        <button id="noBtn">NO 😅</button>
     </div>
 
-    <canvas id="confetti"></canvas>
+    <div id="musica">
+        <audio id="cancion" src="music/amor.mp3" preload="auto"></audio>
+        <audio id="miAudio" src="audio/mi-mensaje.mp3" preload="auto"></audio>
+        <button id="playBtn">Reproducir 🎵</button>
+    </div>
+
+    <canvas id="efectos"></canvas>
+
     <script src="script.js"></script>
 </body>
 </html>
