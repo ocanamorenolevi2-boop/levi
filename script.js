@@ -1,48 +1,70 @@
-// script.js
-
-// Functionality for the "escaping no" button
-const escapingNoButton = document.getElementById('noButton');
-
-function handleNoButtonClick() {
-    // Move the button to a random position
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 100);
-    escapingNoButton.style.position = 'absolute';
-    escapingNoButton.style.left = `${x}px`;
-    escapingNoButton.style.top = `${y}px`;
-
-    // Trigger confetti animation
-    triggerConfetti();
+body {
+    background: #ffe6f0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
 }
 
-function triggerConfetti() {
-    // Simple confetti animation using JavaScript
-    const confettiContainer = document.createElement('div');
-    confettiContainer.className = 'confetti-container';
-    document.body.appendChild(confettiContainer);
-
-    for (let i = 0; i < 100; i++) {
-        const confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        confetti.style.backgroundColor = getRandomColor();
-        confetti.style.left = `${Math.random() * 100}vw`;
-        confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        confettiContainer.appendChild(confetti);
-
-        // Remove confetti after animation
-        setTimeout(() => {
-            confetti.remove();
-        }, 5000);
-    }
+h1 {
+    font-size: 3em;
+    color: #ff3366;
+    margin-top: 20px;
 }
 
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+#zona-juego {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 2px solid #ff3366;
+    padding: 20px;
+    border-radius: 15px;
 }
 
-escapingNoButton.addEventListener('click', handleNoButtonClick);
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foto-texto {
+    margin: 15px;
+}
+
+.foto-texto img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255,0,102,0.5);
+}
+
+.foto-texto p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#noBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #ff6699;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#musica {
+    margin-top: 30px;
+}
+
+#efectos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
