@@ -1,81 +1,34 @@
 body {
-    background: #ffe6f0;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
-    overflow-x: hidden;
-}
-
-h1 {
-    font-size: 3em;
-    color: #ff3366;
-    margin-top: 20px;
-}
-
-#zona-juego {
-    position: relative;
-    width: 90%;
-    max-width: 1000px;
-    margin: 20px auto;
-    border: 2px solid #ff3366;
+    background: #ffe6e6;
     padding: 20px;
-    border-radius: 15px;
 }
 
-#galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.foto-texto {
-    margin: 15px;
-}
-
-.foto-texto img {
-    width: 200px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255,0,102,0.5);
-}
-
-.foto-texto p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-#siBtn, #noBtn {
-    position: absolute;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
+input, button {
+    padding: 10px;
     font-size: 16px;
+    margin: 5px;
+}
+
+.memory-text img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.buttons button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
-#siBtn {
-    bottom: 20px;
-    left: 20px;
-    background: #66cc66;
-    color: white;
+#yes-btn {
+    background-color: pink;
 }
 
-#noBtn {
-    bottom: 20px;
-    right: 20px;
-    background: #ff6699;
-    color: white;
-}
-
-#musica {
-    margin-top: 30px;
-}
-
-#efectos {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
+#no-btn {
+    background-color: lightcoral;
 }
