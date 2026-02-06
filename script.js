@@ -58,42 +58,47 @@ function animar() {
 setInterval(generarParticulas, 300);
 animar();
 
-// === Botón NO travieso ===
+// === Botón NO travieso y suave ===
 const noBtn = document.getElementById('noBtn');
 const zona = document.getElementById('zona-juego');
 
-noBtn.addEventListener('mouseover', () => {
+// Evita click
+noBtn.addEventListener('click', e => e.preventDefault());
+
+// Se mueve suavemente al intentar acercar el mouse
+noBtn.addEventListener('mouseenter', () => {
     const zonaRect = zona.getBoundingClientRect();
     const btnRect = noBtn.getBoundingClientRect();
 
-    const minX = 0;
-    const minY = 0;
     const maxX = zonaRect.width - btnRect.width;
     const maxY = zonaRect.height - btnRect.height;
 
     const bordes = ['top', 'bottom', 'left', 'right'];
     const borde = bordes[Math.floor(Math.random() * bordes.length)];
 
-    let x, y;
+    let newX, newY;
+
     switch(borde) {
         case 'top':
-            x = Math.random() * maxX;
-            y = 0;
+            newX = Math.random() * maxX;
+            newY = 0;
             break;
         case 'bottom':
-            x = Math.random() * maxX;
-            y = maxY;
+            newX = Math.random() * maxX;
+            newY = maxY;
             break;
         case 'left':
-            x = 0;
-            y = Math.random() * maxY;
+            newX = 0;
+            newY = Math.random() * maxY;
             break;
         case 'right':
-            x = maxX;
-            y = Math.random() * maxY;
+            newX = maxX;
+            newY = Math.random() * maxY;
             break;
     }
 
-    noBtn.style.left = x + 'px';
-    noBtn.style.top = y + 'px';
+    // Movimiento suave
+    noBtn.style.transition = 'all 0.5s ease';
+    noBtn.style.left = newX + 'px';
+    noBtn.style.top = newY + 'px';
 });
